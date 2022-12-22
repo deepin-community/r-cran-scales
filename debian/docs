@@ -1,0 +1,5 @@
+NEWS.md
+README.md
+tests
+debian/README.test
+debian/tests/run-unit-test

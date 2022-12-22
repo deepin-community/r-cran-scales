@@ -1,0 +1,31 @@
+Source: r-cran-scales
+Maintainer: Debian R Packages Maintainers <r-pkg-team@alioth-lists.debian.net>
+Uploaders: Benjamin Eikel <debian@eikel.org>
+Section: gnu-r
+Priority: optional
+Build-Depends: debhelper-compat (= 12),
+               dh-r,
+               r-base-dev,
+               r-cran-farver,
+               r-cran-labeling,
+               r-cran-lifecycle,
+               r-cran-munsell (>= 0.5),
+               r-cran-r6,
+               r-cran-rcolorbrewer,
+               r-cran-viridislite
+Standards-Version: 4.5.0
+Vcs-Browser: https://salsa.debian.org/r-pkg-team/r-cran-scales
+Vcs-Git: https://salsa.debian.org/r-pkg-team/r-cran-scales.git
+Homepage: https://cran.r-project.org/package=scales
+Rules-Requires-Root: no
+
+Package: r-cran-scales
+Architecture: all
+Depends: ${R:Depends},
+         ${misc:Depends}
+Recommends: ${R:Recommends}
+Suggests: ${R:Suggests}
+Description: Scale functions for visualization
+ Graphical scales map data to aesthetics, and provide
+ methods for automatically determining breaks and labels
+ for axes and legends.

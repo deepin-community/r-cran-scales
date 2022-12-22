@@ -1,0 +1,11 @@
+#!/bin/sh -e
+
+pkg=r-cran-scales
+if [ "$AUTOPKGTEST_TMP" = "" ] ; then
+  AUTOPKGTEST_TMP=`mktemp -d /tmp/${pkg}-test.XXXXXX`
+fi
+cd $AUTOPKGTEST_TMP
+cp -a /usr/share/doc/${pkg}/tests/* $AUTOPKGTEST_TMP
+gunzip -r *
+LC_ALL=C R --no-save < testthat.R
+rm -fr $AUTOPKGTEST_TMP/*
